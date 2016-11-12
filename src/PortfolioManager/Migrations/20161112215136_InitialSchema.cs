@@ -14,10 +14,12 @@ namespace PortfolioManager.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Autoincrement", true),
+                    CoverImagePath = table.Column<string>(maxLength: 300, nullable: true),
                     Description = table.Column<string>(maxLength: 500, nullable: true),
                     IsPrivate = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
-                    PassCode = table.Column<string>(nullable: true)
+                    PassCode = table.Column<string>(maxLength: 20, nullable: true),
+                    Published = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,7 +35,8 @@ namespace PortfolioManager.Migrations
                     AlbumId = table.Column<int>(nullable: false),
                     Description = table.Column<string>(maxLength: 500, nullable: true),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
-                    Path = table.Column<string>(maxLength: 300, nullable: true)
+                    Path = table.Column<string>(maxLength: 300, nullable: true),
+                    Published = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

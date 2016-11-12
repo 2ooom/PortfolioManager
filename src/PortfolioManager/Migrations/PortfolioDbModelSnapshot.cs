@@ -20,6 +20,9 @@ namespace PortfolioManager.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("CoverImagePath")
+                        .HasAnnotation("MaxLength", 300);
+
                     b.Property<string>("Description")
                         .HasAnnotation("MaxLength", 500);
 
@@ -29,7 +32,10 @@ namespace PortfolioManager.Migrations
                         .IsRequired()
                         .HasAnnotation("MaxLength", 100);
 
-                    b.Property<string>("PassCode");
+                    b.Property<string>("PassCode")
+                        .HasAnnotation("MaxLength", 20);
+
+                    b.Property<bool>("Published");
 
                     b.HasKey("Id");
 
@@ -52,6 +58,8 @@ namespace PortfolioManager.Migrations
 
                     b.Property<string>("Path")
                         .HasAnnotation("MaxLength", 300);
+
+                    b.Property<bool>("Published");
 
                     b.HasKey("Id");
 

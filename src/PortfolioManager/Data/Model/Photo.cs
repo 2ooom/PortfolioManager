@@ -17,6 +17,8 @@ namespace PortfolioManager.Data.Model
 
         public int AlbumId { get; set; }
 
+        public bool Published { get; set; }
+
         public Album Album { get; set; }
     }
 }

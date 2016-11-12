@@ -15,7 +15,13 @@ namespace PortfolioManager.Data.Model
 
         public bool IsPrivate { get; set; }
 
+        [MaxLength(20)]
         public string PassCode { get; set; }
+
+        public bool Published { get; set; }
+
+        [MaxLength(300)]
+        public string CoverImagePath { get; set; }
 
         public ICollection<Photo> Photos { get; set; }
     }

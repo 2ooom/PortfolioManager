@@ -18,6 +18,8 @@ namespace PortfolioManager.Data.Model
         [MaxLength(20)]
         public string PassCode { get; set; }
 
+        public int Order { get; set; }
+
         public bool Published { get; set; }
 
         [MaxLength(300)]

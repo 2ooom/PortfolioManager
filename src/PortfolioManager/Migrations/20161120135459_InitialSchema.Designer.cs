@@ -7,8 +7,8 @@ using PortfolioManager.Data;
 
 namespace PortfolioManager.Migrations
 {
-    [DbContext(typeof(PortfolioDb))]
-    [Migration("20161112215136_InitialSchema")]
+    [DbContext(typeof(PortfolioDbContext))]
+    [Migration("20161120135459_InitialSchema")]
     partial class InitialSchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,8 @@ namespace PortfolioManager.Migrations
                         .IsRequired()
                         .HasAnnotation("MaxLength", 100);
 
+                    b.Property<int>("Order");
+
                     b.Property<string>("PassCode")
                         .HasAnnotation("MaxLength", 20);
 
@@ -56,6 +58,8 @@ namespace PortfolioManager.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 100);
+
+                    b.Property<int>("Order");
 
                     b.Property<string>("Path")
                         .HasAnnotation("MaxLength", 300);

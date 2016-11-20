@@ -18,6 +18,7 @@ namespace PortfolioManager.Migrations
                     Description = table.Column<string>(maxLength: 500, nullable: true),
                     IsPrivate = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
+                    Order = table.Column<int>(nullable: false),
                     PassCode = table.Column<string>(maxLength: 20, nullable: true),
                     Published = table.Column<bool>(nullable: false)
                 },
@@ -35,6 +36,7 @@ namespace PortfolioManager.Migrations
                     AlbumId = table.Column<int>(nullable: false),
                     Description = table.Column<string>(maxLength: 500, nullable: true),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
+                    Order = table.Column<int>(nullable: false),
                     Path = table.Column<string>(maxLength: 300, nullable: true),
                     Published = table.Column<bool>(nullable: false)
                 },

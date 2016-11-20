@@ -3,7 +3,7 @@ using PortfolioManager.Data.Model;
 
 namespace PortfolioManager.Data
 {
-    public class PortfolioDb : DbContext
+    public class PortfolioDbContext : DbContext
     {
         public DbSet<Album> Albums { get; set; }
         public DbSet<Photo> Photos { get; set; }

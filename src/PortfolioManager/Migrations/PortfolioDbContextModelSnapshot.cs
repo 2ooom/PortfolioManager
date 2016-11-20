@@ -7,8 +7,8 @@ using PortfolioManager.Data;
 
 namespace PortfolioManager.Migrations
 {
-    [DbContext(typeof(PortfolioDb))]
-    partial class PortfolioDbModelSnapshot : ModelSnapshot
+    [DbContext(typeof(PortfolioDbContext))]
+    partial class PortfolioDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -31,6 +31,8 @@ namespace PortfolioManager.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 100);
+
+                    b.Property<int>("Order");
 
                     b.Property<string>("PassCode")
                         .HasAnnotation("MaxLength", 20);
@@ -55,6 +57,8 @@ namespace PortfolioManager.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 100);
+
+                    b.Property<int>("Order");
 
                     b.Property<string>("Path")
                         .HasAnnotation("MaxLength", 300);

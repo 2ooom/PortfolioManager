@@ -24,6 +24,7 @@ namespace PortfolioManager.Controllers
                     .OrderBy(t => t.Order)
                     .Select(t => new AlbumInfo
                     {
+                        Id = t.Id,
                         Name = t.Name,
                         PhotoUrls = t.Photos.Where(x => x.Published).OrderBy(x => x.Order).Select(x => x.Path)
                     });
